@@ -28,7 +28,7 @@ session.commit()
 
 for student in students:
     for subject in subjects:
-        score = random.randint(60, 100)  # Випадковий бал
+        score = random.randint(60, 100)
         date_received = fake.date_time_between(start_date="-1y", end_date="now")  # Випадкова дата отримання оцінки
         student_subject = StudentSubject(student=student, subject=subject, score=score, date_received=date_received)
         session.add(student_subject)
